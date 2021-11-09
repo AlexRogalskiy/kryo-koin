@@ -14,7 +14,7 @@ import java.io.FileOutputStream
 
 fun main() {
     val saveFile = File("file.bin")
-    val kryo = buildKryo()
+    val kryo = buildKryoDefinition()
 
     val smthg: Definition<Dimension> = { it -> Dimension() }
 
@@ -35,7 +35,7 @@ fun main() {
 }
 
 
-private fun buildKryo(): Kryo {
+private fun buildKryoDefinition(): Kryo {
 
     val kryo = Kryo()
 

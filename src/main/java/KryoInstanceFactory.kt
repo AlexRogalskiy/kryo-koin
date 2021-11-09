@@ -47,13 +47,3 @@ fun main() {
         restored.get(InstanceContext(koin, Scope(StringQualifier("foo"), ScopeID(), false, koin), ParametersHolder()))
     println("result is ${result}")
 }
-
-
-private fun buildKryo(): Kryo {
-    val kryo = Kryo()
-
-    kryo.setReferences(true)
-    kryo.isRegistrationRequired = false
-
-    return kryo
-}

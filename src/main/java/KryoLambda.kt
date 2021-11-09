@@ -12,7 +12,7 @@ typealias Builder<T> = String.(Int) -> T
 
 fun main() {
     val saveFile = File("file.bin")
-    val kryo = buildKryo()
+    val kryo = buildLambdaKryo()
 
     val smthg: Builder<Dimension> = { it ->
         println(this)
@@ -33,7 +33,7 @@ fun main() {
 }
 
 
-private fun buildKryo(): Kryo {
+private fun buildLambdaKryo(): Kryo {
     val kryo = Kryo()
 
     kryo.setReferences(true)
